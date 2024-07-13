@@ -2,15 +2,17 @@ package main
 
 import (
 	"StrategyPattern/model"
-	"fmt"
 )
 
 func main() {
 	normalVehicle := model.NormalVehicle{}
-	normalVehicle.VDrive(normalVehicle.NormalDrive)
-
-	fmt.Println()
-
+	vh := model.Vehicle{
+		Drive: normalVehicle.NormalDrive,
+	}
+	vh.VDrive()
 	sportVehicle := model.SportVehicle{}
-	sportVehicle.VDrive(sportVehicle.SpecialDrive)
+	vh2 := model.Vehicle{
+		Drive: sportVehicle.SpecialDrive,
+	}
+	vh2.VDrive()
 }

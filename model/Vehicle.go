@@ -1,8 +1,11 @@
 package model
 
+import "StrategyPattern/Strategy"
+
 type Vehicle struct {
+	Drive Strategy.IDriveStrategy
 }
 
-type IVehicle interface {
-	VDrive()
+func (v *Vehicle) VDrive() {
+	v.Drive.Drive()
 }

@@ -11,7 +11,3 @@ func (n *NormalVehicle) NewNormalVehicle() *NormalVehicle {
 		NormalDrive: &Strategy.NormalDriveStrategy{},
 	}
 }
-
-func (n *NormalVehicle) VDrive(drive Strategy.IDriveStrategy) {
-	drive.Drive()
-}

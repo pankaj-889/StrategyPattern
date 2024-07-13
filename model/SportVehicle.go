@@ -11,7 +11,3 @@ func (s *SportVehicle) NewSportVehicle() *SportVehicle {
 		SpecialDrive: &Strategy.SpecialDriveStrategy{},
 	}
 }
-
-func (s *SportVehicle) VDrive(drive Strategy.IDriveStrategy) {
-	drive.Drive()
-}
